@@ -1,5 +1,17 @@
 #include <stdio.h>
 
+void brett(int *pos_2)
+{
+    for(int i = 0;i<6;i++)
+    {
+        for(int j = 0;j<6;j++)
+        {
+            printf("%d ",*pos_2++);
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     int array_1[6][6];
@@ -21,8 +33,9 @@ int main()
         printf("\n");
     }
     */
-    int *pos = array_1;
     
+    /*
+    int *pos = array_1;
     for(int i = 0;i<6;i++)
     {
         for(int j = 0;j<6;j++)
@@ -31,4 +44,6 @@ int main()
         }
         printf("\n");
     }
+    */
+    brett(array_1);
 }
